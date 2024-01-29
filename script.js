@@ -23,6 +23,10 @@ function resizeBoard() {
     let board = document.querySelector('.board'); 
     resizeButton.addEventListener('click', function(e) {
         let boardSize = prompt("How many grids per row and column would you like? (MAX:100)")
+        // if user htis null
+        if (boardSize == null || boardSize == "") {
+            return
+        }
         while (boardSize > 100) {
             boardSize = prompt("The max grids per row and column is 100. Please renter a number less than or equal to 100.");
         }
