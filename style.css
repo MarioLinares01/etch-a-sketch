@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.buttons {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.board {
+    width: 600px;
+    height: 600px;
+    border: 2px solid black;
+    display: grid;
+}
