@@ -64,9 +64,10 @@ function toogleGrid() {
 // Function to handle the sketching on the board
 function sketch() {
     let board_grids = document.querySelectorAll('div.grids');
+    let color = document.querySelector('.color-toggle');
     for (let i = 0; i < board_grids.length; i++) {
         board_grids[i].addEventListener('mouseover', function() {
-            board_grids[i].style.backgroundColor = 'black';
+            board_grids[i].style.backgroundColor = color.value;
         });
     }
 }
