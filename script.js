@@ -21,7 +21,8 @@ function createBoard(size = 16, gridsVissible = false) {
         grid.className = 'grids';
         board.appendChild(grid);
     }
-    sketch()
+    sketch();
+    clearBoard();
 }
 
 // Function to resize the Grid
@@ -63,11 +64,20 @@ function toogleGrid() {
 // Function to handle the sketching on the board
 function sketch() {
     let board_grids = document.querySelectorAll('div.grids');
-    //console.log(board_grids)
-    console.log(board_grids.length)
     for (let i = 0; i < board_grids.length; i++) {
         board_grids[i].addEventListener('mouseover', function() {
             board_grids[i].style.backgroundColor = 'black';
         });
     }
+}
+
+// Function to clear the board
+function clearBoard() {
+    let clear_button = document.querySelector('.clear-button');
+    let board_grids = document.querySelectorAll('div.grids');
+    clear_button.addEventListener('click', function() {
+        board_grids.forEach(function(e) {
+            e.style.backgroundColor = 'white';
+        });
+    });
 }
