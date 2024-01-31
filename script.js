@@ -34,8 +34,8 @@ function resizeBoard() {
         if (boardSize == null || boardSize == "") {
             return
         }
-        while (boardSize > 100) {
-            boardSize = prompt("The max grids per row and column is 100. Please renter a number less than or equal to 100.");
+        while (boardSize <= 0 || boardSize > 100 || isNaN(boardSize)) {
+            boardSize = prompt("Please renter a number between 0 and 100.");
         }
         while (board.firstChild) {
             board.removeChild(board.firstChild);
