@@ -18,8 +18,10 @@ function createBoard(size = 16, gridsVissible = false) {
             grid.style.border = '1px solid #9f9f9f';
         }
         grid.style.height = '100%';
+        grid.className = 'grids';
         board.appendChild(grid);
     }
+    sketch()
 }
 
 // Function to resize the Grid
@@ -56,4 +58,16 @@ function toogleGrid() {
         }
         grid_on = !grid_on;
     });
+}
+
+// Function to handle the sketching on the board
+function sketch() {
+    let board_grids = document.querySelectorAll('div.grids');
+    //console.log(board_grids)
+    console.log(board_grids.length)
+    for (let i = 0; i < board_grids.length; i++) {
+        board_grids[i].addEventListener('mouseover', function() {
+            board_grids[i].style.backgroundColor = 'black';
+        });
+    }
 }
