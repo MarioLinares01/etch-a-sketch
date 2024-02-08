@@ -14,8 +14,8 @@ body {
 }
 
 .board {
-    width: 600px;
-    height: 600px;
+    min-width: 500px;
+    min-height: 500px;
     border: 2px solid black;
     display: grid;
 }
